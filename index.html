@@ -38,12 +38,22 @@
 
     <div class="landing">
         <div class="left-landing">
-        <h1 class="name">Ryan Powell.</h1>
+        <h1 class="name" id="h1">Ryan Powell.</h1>
         
-        <div class="subtext">
+        <div class="subtext" id="subtext">
             <h2>Systems Administrator</h2>
             <h2>Devops Engineer</h2>
         </div>
+
+        <div class="form" id="form">
+          <form class="contact-form" action="contactform.php" method="post">
+            <input type="text" name="name" placeholder="Enter Full Name."><br>
+            <input type="text" name="mail" placeholder="Enter Email Address."><br>
+            <textarea class="message" name="message" placeholder="Enter Message."></textarea><br>
+            <button type="submit" name="submit">Send Message.</button>
+          </form>
+        </div>
+
         <div class="hero">
             <div class="social">
                 <a href="https://www.linkedin.com/in/ryan-powell-84073b167/" target="_blank" rel="noopener noreferrer"><img src="./img/linkedin-brands.svg" alt="LinkedIn"></a>

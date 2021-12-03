@@ -141,3 +141,34 @@ h1::after{
   width: 50%;
   float: right;
 }
+
+.form {
+  display: none;
+  width: 100%;
+
+}
+
+.form input {
+  margin: 1em;
+  width: 100%;
+  
+}
+
+.form textarea {
+  margin: 1em;
+  width: 100%;
+  
+}
+
+.form .message  {
+  height: 200px;
+  text-align: left;
+  vertical-align: text-top;
+  resize: none;
+}
+
+.form button {
+  margin: 1em;
+  background-color: var(--highlight-text-color);
+  color: var(--bg-color);
+}

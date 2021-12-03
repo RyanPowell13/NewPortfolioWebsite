@@ -13,15 +13,29 @@ body {
 
 .main-nav {
   position: absolute;
+  opacity: 1;
+}
+
+.onLoad{
   opacity: 0;
-  transform: translateY(-3rem);
+  transform: translateY(3rem);
   animation: fadeInUp 2s ease calc(var(--type-speed) + 2s) forwards;
-  
+}
+
+.onLoadImg{
+  opacity: 0;
+  transform: translateY(3rem);
+  animation: fadeInUp 2s ease calc(var(--type-speed) + 2s) forwards;
 }
 
 .navbar {
   text-transform: uppercase;
   font-size: 30px;
+}
+
+.navigation {
+  animation: fadeOut .5s ease,
+    fadeBackIn .5s ease .5s forwards;
 }
 
 .landing {
@@ -35,9 +49,6 @@ body {
   object-fit: scale-down;
   object-position: bottom right;
   float: right;
-  opacity: 0;
-  transform: translateY(3rem);
-  animation: fadeInUp 2s ease calc(var(--type-speed) + 2s) forwards;
 }
 
 
@@ -87,12 +98,30 @@ h1::after{
       transform: translateY(0);}
 }
 
+@keyframes fadeOut {
+  
+  from {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  to {opacity: 0;
+      transform: translateY(-3rem);}
+}
+
+@keyframes fadeBackIn {
+  
+  from {
+    opacity: 0;
+    transform: translateY(-3rem);
+  }
+  
+  to {opacity: 1;
+      transform: translateY(0);}
+}
 
 .landing .subtext {
   margin-bottom: 2em;
-  opacity: 0;
-  transform: translateY(3rem);
-  animation: fadeInUp 2s ease calc(var(--type-speed) + 2s) forwards;
 }
 
 .landing .subtext h2{
@@ -106,9 +135,6 @@ h1::after{
   justify-content: center;
   align-items: left;
   width: 50%;
-  opacity: 0;
-  transform: translateY(3rem);
-  animation: fadeInUp 2s ease calc(var(--type-speed) + 2s) forwards;
 }
 
 .social {
@@ -149,13 +175,15 @@ h1::after{
 }
 
 .form input {
-  margin: 1em;
+  margin-top: 1em;
+  margin-bottom: 1em;
   width: 100%;
   
 }
 
 .form textarea {
-  margin: 1em;
+  margin-top: 1em;
+  margin-bottom: 1em;
   width: 100%;
   
 }
@@ -168,7 +196,15 @@ h1::after{
 }
 
 .form button {
-  margin: 1em;
+  cursor: pointer;
+  margin-top: 1em;
+  margin-bottom: 1em;
   background-color: var(--highlight-text-color);
   color: var(--bg-color);
+}
+
+.form button:hover{
+  color: lightskyblue;
+  transition-delay: .25s;
+  transition: ease-in .25s;
 }

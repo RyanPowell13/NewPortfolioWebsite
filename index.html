@@ -11,7 +11,7 @@
     <title>Ryan Powell</title>
 </head>
 <body>
-    <div class="main-nav">
+    <div id="navbar" class="main-nav onLoad">
     <nav class="navbar navbar-expand-lg navbar-light">
         <a class="navbar-brand" href="#"></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -20,7 +20,7 @@
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav">
             <li class="nav-item active">
-              <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+              <a class="nav-link" id="home-button" href="#">Home<span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#">Portfolio</a>
@@ -40,7 +40,7 @@
         <div class="left-landing">
         <h1 class="name" id="h1">Ryan Powell.</h1>
         
-        <div class="subtext" id="subtext">
+        <div class="subtext onLoad" id="subtext">
             <h2>Systems Administrator</h2>
             <h2>Devops Engineer</h2>
         </div>
@@ -54,7 +54,7 @@
           </form>
         </div>
 
-        <div class="hero">
+        <div class="hero onLoad">
             <div class="social">
                 <a href="https://www.linkedin.com/in/ryan-powell-84073b167/" target="_blank" rel="noopener noreferrer"><img src="./img/linkedin-brands.svg" alt="LinkedIn"></a>
                 <a href="https://github.com/RyanPowell13" target="_blank" rel="noopener noreferrer"><img src="./img/github-square-brands.svg" alt="GitHub"></a>
@@ -64,7 +64,7 @@
         </div>
 
         <div class="right-landing">
-        <img src="./img/PortfolioPicture.png" alt="">
+        <img class="onLoadImg" src="./img/PortfolioPicture.png" alt="">
         </div>
         
     </div>

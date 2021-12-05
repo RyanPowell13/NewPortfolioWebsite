@@ -168,6 +168,24 @@ h1::after{
   float: right;
 }
 
+.resume {
+  font-size: 30px;
+  display: none;
+}
+
+.resume .certs {
+  width: 50%;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap; 
+  padding-bottom: 2em;
+}
+
+.resume .certs img {
+  width: 4.5em;
+  height: 4.5em;
+}
+
 .form {
   display: none;
   width: 100%;

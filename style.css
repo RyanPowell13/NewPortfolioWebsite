@@ -243,18 +243,21 @@ h1::after{
 @media all and (max-width: 991px) {
   .main-nav {
     position: static;
+    width: 100vw;
   }
 
   .landing .name{
     font-size: 5em;
+    margin-left: 1rem;
   }
 
   .landing .subtext{
     font-size: 4em;
+    margin-left: 1rem;
   }
 
   .landing {
-    width: 100%;
+    width: 100vw;
     height: 100%;
   }
 
@@ -269,6 +272,7 @@ h1::after{
 
   .social {
     padding-bottom: 3em;
+    margin-left: 1rem;
   }
 
   .landing .right-landing {

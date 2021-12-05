@@ -8,7 +8,18 @@
 
 body {
   font-family: 'Cascadia Code', sans-serif;
+  color: #1f1f1f;
   background-color: var(--bg-color);
+}
+
+.mobile-landing-top {
+  display: none;
+  width: 100vw;
+}
+
+.mobile-landing-top .mobile-landing-img {
+  width: 100vw;
+  height: 100%;
 }
 
 .main-nav {
@@ -140,8 +151,8 @@ h1::after{
 .social {
   width: 50%;
   display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;  
+  justify-content: flex-start;
+  flex-wrap: nowrap;  
 }
 
 .social img {
@@ -225,4 +236,58 @@ h1::after{
   color: lightskyblue;
   transition-delay: .25s;
   transition: ease-in .25s;
+}
+
+
+
+@media all and (max-width: 991px) {
+  .main-nav {
+    position: static;
+  }
+
+  .landing .name{
+    font-size: 5em;
+  }
+
+  .landing .subtext{
+    font-size: 4em;
+  }
+
+  .landing {
+    width: 100%;
+    height: 100%;
+  }
+
+  .mobile-landing-top {
+    display: inline;
+  }
+
+  .social img {
+    width: 3.75em;
+    height: 3.75em;
+  }
+
+  .social {
+    padding-bottom: 3em;
+  }
+
+  .landing .right-landing {
+    float: none;
+    clear: none;
+    display: none;
+  }
+
+  .landing .left-landing {
+    float: none;
+    clear: none;
+    width: 100%;
+  }
+
+  .form {
+    width: 75%;
+  }
+
+  .resume p {
+    width: 90%;
+  }
 }

@@ -291,3 +291,28 @@ h1::after{
     width: 90%;
   }
 }
+
+@media all and (max-width: 480px) {
+  .landing .name{
+    font-size: 2em;
+  }
+
+  .landing .subtext h2{
+    font-size: 1.5rem;
+  }
+
+  .landing .subtext h2{
+    margin-bottom: 1.5em;
+  }
+  
+  .social img {
+    width: 3em;
+    height: 3em;
+  }
+}
+
+@media all and (max-width: 375px) {
+  .landing .subtext h2{
+    font-size: 1.25rem;
+  }
+}

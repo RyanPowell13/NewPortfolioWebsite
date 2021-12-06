@@ -263,6 +263,12 @@ h1::after{
 
   .mobile-landing-top {
     display: inline;
+    width: 100vw;
+  }
+
+  .mobile-landing-top img {
+    width: 90vw;
+    height: 90%;
   }
 
   .social img {
@@ -294,6 +300,17 @@ h1::after{
   .resume p {
     width: 90%;
   }
+}
+
+@media all and (max-width: 860px) {
+  .landing .name{
+    font-size: 3em;
+  }
+
+  .landing .subtext h2{
+    font-size: 2rem;
+  }
+
 }
 
 @media all and (max-width: 480px) {

@@ -5,6 +5,7 @@ var subtext = document.getElementById("subtext")
 var form = document.getElementById("form")
 var resumeText = document.getElementById("resumeText")
 
+
 var delayInMilliseconds = 7000;
 var onLoad =  document.querySelectorAll(".onLoad")
 setTimeout(function() {
@@ -14,25 +15,43 @@ setTimeout(function() {
       }, delayInMilliseconds);
 
 
-      
-contact.onclick = function(){
+function changeNavigationHighlight(newTab) {
+    let navbar = document.querySelectorAll(".active");
 
-    var navbar = document.querySelectorAll(".active")
-    var delayInMilliseconds = 1500;
-
-    document.getElementById("navbar").classList.add("navigation");
-    document.getElementById("h1").innerHTML = "Contact Me.";
-    subtext.style.display = "none";
-    resumeText.style.display = "none";
-    form.style.display = "block";
     [].forEach.call(navbar, function(items) {
         items.classList.remove("active")
     });
-    contact.classList.add("active")
+    newTab.classList.add("active");
+}
+
+function changeContentOnNavigation(newTab) {
+    subtext.style.display = "none";
+    resumeText.style.display = "none";
+    form.style.display = "none";
+
+    newTab.style.display = "inline";
+}
+
+function removeNavigationClass() {
+    var delayInMillisecondsNav = 1500;
 
     setTimeout(function() {
         document.getElementById("navbar").classList.remove("navigation");
-      }, delayInMilliseconds);
+    }, delayInMillisecondsNav);
+
+}
+
+      
+contact.onclick = function(){
+
+    document.getElementById("navbar").classList.add("navigation");
+    document.getElementById("h1").innerHTML = "Contact Me.";
+
+    changeContentOnNavigation(form);
+
+    changeNavigationHighlight(contact);
+
+    removeNavigationClass();
 
     return false;
 
@@ -40,22 +59,14 @@ contact.onclick = function(){
 
 home.onclick = function(){
 
-    var navbar = document.querySelectorAll(".active")
-    var delayInMilliseconds = 1500;
-
     document.getElementById("navbar").classList.add("navigation");
     document.getElementById("h1").innerHTML = "Ryan Powell.";
-    subtext.style.display = "inline";
-    form.style.display = "none";
-    resumeText.style.display = "none";
-    [].forEach.call(navbar, function(items) {
-        items.classList.remove("active")
-    });
-    home.classList.add("active")
 
-    setTimeout(function() {
-        document.getElementById("navbar").classList.remove("navigation");
-      }, delayInMilliseconds);
+    changeContentOnNavigation(subtext);
+
+    changeNavigationHighlight(home);
+
+    removeNavigationClass();
 
     return false;
     
@@ -63,22 +74,14 @@ home.onclick = function(){
 
 resume.onclick = function(){
 
-    var navbar = document.querySelectorAll(".active")
-    var delayInMilliseconds = 1500;
-
     document.getElementById("navbar").classList.add("navigation");
     document.getElementById("h1").innerHTML = "Resume.";
-    subtext.style.display = "none";
-    form.style.display = "none";
-    resumeText.style.display = "inline";
-    [].forEach.call(navbar, function(items) {
-        items.classList.remove("active")
-    });
-    resume.classList.add("active")
 
-    setTimeout(function() {
-        document.getElementById("navbar").classList.remove("navigation");
-      }, delayInMilliseconds);
+    changeContentOnNavigation(resumeText);
+
+    changeNavigationHighlight(resume);
+
+    removeNavigationClass();
 
     return false;
     

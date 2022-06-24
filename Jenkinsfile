@@ -9,7 +9,7 @@ pipeline {
     stage('Cloning Git') {
       steps {
         catchError(buildResult: 'SUCCESS', stageResult: 'FAILURE') {
-          git branch: 'main', 'https://github.com/RyanPowell13/NewPortfolioWebsite.git'
+           git([url: 'https://github.com/RyanPowell13/NewPortfolioWebsite.git', branch: 'main'])
         }
       }
     }

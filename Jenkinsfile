@@ -8,8 +8,9 @@ pipeline {
   stages {
     stage('Cloning Git') {
       steps {
-        git 'https://github.com/RyanPowell13/NewPortfolioWebsite.git'
- 
+        catchError(buildResult: 'SUCCESS', stageResult: 'FAILURE') {
+          git 'https://github.com/RyanPowell13/NewPortfolioWebsite.git'
+        }
       }
     }
     stage('Building image') {
